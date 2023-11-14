@@ -12,8 +12,8 @@
   <body>
     <div class="wrapper">
         <header class="header flex">
-            <img src="" alt="">
-            <div class="burger-button">
+            <a href="/"><img src="images/logo.svg" alt="UCANSPEAK"></a>
+            <div class="burger-button" id="burger-button" onclick="this.classList.toggle('active')">
               <div class="bar"></div>
               <div class="bar"></div>
               <div class="bar"></div>
@@ -25,9 +25,35 @@
               </ul>
             </div> -->
         </header>
-        <main class="main">
-            <div class="container">
-              
+        <main class="main top">
+            <div class="container center">
+              <img src="images/bg-main.svg" alt="">
+              <div class="main-block">
+                <p class="main-block__text">НАУЧИМ ГОВОРИТЬ НА ЛЮБЫЕ ТЕМЫ И УВЕРЕННО ОБЩАТЬСЯ ЗАГРАНИЦЕЙ</p>
+                <a href="/" class="main-block__button button blue">Начать обучение</a>
+              </div>
+            </div>
+            <div class="container white">
+              <div class="about-block">
+                <h2 class="subtitle">О НАШЕЙ ШКОЛЕ</h2>
+                <div class="about-cards">
+                  <div class="about-cards__item">
+                    <img src="images/puzzle-dynamic-color.png" alt="">
+                    <p class="about-cards__item-title">Языковая воронка</p>
+                    <p class="about-cards__item-text">Многократная смена деятельности в процессе урока позволяет достичь максимальных результатов в кратчайшие сроки!</p>
+                  </div>
+                  <div class="about-cards__item">
+                    <img src="images/notebook-dynamic-color.png" alt="">
+                    <p class="about-cards__item-title">Удовольствие от прогресса</p>
+                    <p class="about-cards__item-text">Вы будете чувствовать прогресс, который достигается без особых усилий на каждом уроке, и это доставит вам массу удовольствия!</p>
+                  </div>
+                  <div class="about-cards__item">
+                    <img src="images/chat-bubble-dynamic-color.png" alt="">
+                    <p class="about-cards__item-title">Интересно и легко</p>
+                    <p class="about-cards__item-text">Уроки проходят незаметно и увлекательно, позволяя вам легко усваивать знания!</p>
+                  </div>
+                </div>
+              </div>
             </div>
         </main>
         <footer class="footer">        
