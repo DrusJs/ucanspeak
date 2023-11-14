@@ -549,3 +549,11 @@ img.absolute {
     text-align: center;
     margin-top: 10px;
 }
+.cards-container .button {
+    max-width: 430px;
+    margin: 66px auto 0;
+}
+
+.footer {
+    background-color: #4A4F5F;
+}
