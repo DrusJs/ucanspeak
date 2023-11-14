@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" href="images/icon.svg">
+    <link rel="stylesheet" href="css/swiper.min.css" /> 
     <link rel="stylesheet" href="css/style.css">
 
     <title>UCANSPEAK</title>
@@ -33,33 +34,72 @@
                 <a href="/" class="main-block__button button blue">Начать обучение</a>
               </div>
             </div>
-            <div class="container white">
-              <div class="about-block">
-                <h2 class="subtitle">О НАШЕЙ ШКОЛЕ</h2>
-                <div class="about-cards">
-                  <div class="about-cards__item">
-                    <img src="images/puzzle-dynamic-color.png" alt="">
-                    <p class="about-cards__item-title">Языковая воронка</p>
-                    <p class="about-cards__item-text">Многократная смена деятельности в процессе урока позволяет достичь максимальных результатов в кратчайшие сроки!</p>
-                  </div>
-                  <div class="about-cards__item">
-                    <img src="images/notebook-dynamic-color.png" alt="">
-                    <p class="about-cards__item-title">Удовольствие от прогресса</p>
-                    <p class="about-cards__item-text">Вы будете чувствовать прогресс, который достигается без особых усилий на каждом уроке, и это доставит вам массу удовольствия!</p>
-                  </div>
-                  <div class="about-cards__item">
-                    <img src="images/chat-bubble-dynamic-color.png" alt="">
-                    <p class="about-cards__item-title">Интересно и легко</p>
-                    <p class="about-cards__item-text">Уроки проходят незаметно и увлекательно, позволяя вам легко усваивать знания!</p>
-                  </div>
+            <div class="about-block white-block">
+              <h2 class="subtitle">О НАШЕЙ ШКОЛЕ</h2>
+              <div class="about-cards">
+                <div class="about-cards__item">
+                  <img src="images/puzzle-dynamic-color.png" alt="">
+                  <p class="about-cards__item-title">Языковая воронка</p>
+                  <p class="about-cards__item-text">Многократная смена деятельности в процессе урока позволяет достичь максимальных результатов в кратчайшие сроки!</p>
+                </div>
+                <div class="about-cards__item">
+                  <img src="images/notebook-dynamic-color.png" alt="">
+                  <p class="about-cards__item-title">Удовольствие от прогресса</p>
+                  <p class="about-cards__item-text">Вы будете чувствовать прогресс, который достигается без особых усилий на каждом уроке, и это доставит вам массу удовольствия!</p>
+                </div>
+                <div class="about-cards__item">
+                  <img src="images/chat-bubble-dynamic-color.png" alt="">
+                  <p class="about-cards__item-title">Интересно и легко</p>
+                  <p class="about-cards__item-text">Уроки проходят незаметно и увлекательно, позволяя вам легко усваивать знания!</p>
                 </div>
               </div>
+            </div>
+            <div class="container method">
+              <div class="method-block">
+                <h2 class="title">Авторская методика</h2>
+                <p class="method-block__text text">Которая сделает процесс обучения захватывающим и эффективным</p>
+                <button class="button blue">ЗАПИСАТЬСЯ НА БЕСПЛАТНЫЙ УРОК</button>
+              </div>
+              <img class="absolute" src="images/iPhone.png" alt="">
+            </div>
+            <div class="fits-block white-block">
+              <h2 class="subtitle">КОМУ ПОДОЙДЕТ?</h2>
+              <div class="fit-buttons">
+                <div class="fit-buttons__item active" onclick="fitButtonsAction(this, 1)">Новичок</div>
+                <div class="fit-buttons__item" onclick="fitButtonsAction(this, 2)">Средний</div>
+                <div class="fit-buttons__item" onclick="fitButtonsAction(this, 0)">Продвинутый</div>
+              </div>
+              <div class="fit flex">
+                <div class="swiper fit-tabs">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">Научитесь общаться на английском языке и уверенно чувствовать себя в различных ситуациях, как за границей, так и на родине</div>
+                    <div class="swiper-slide">Средний Средний Средний Средний Средний и уверенно чувствовать себя в различных ситуациях, как за границей, так и на родине</div>
+                    <div class="swiper-slide">Продвинутый Продвинутый Продвинутый Продвинутый и уверенно чувствовать себя в различных ситуациях, как за границей, так и на родине</div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+                <button class="button purple">начать обучение</button>
+              </div>
+            </div>
+            <div class="bg-block">
+              <img src="images/block-bg.png" alt="">
+            </div>
+            <div class="container rate">
+              <div class="rate-block">
+                <h2 class="title">ТАРИФЫ</h2>
+                <p class="method-block__text text">Которая сделает процесс обучения захватывающим и эффективным</p>
+                <button class="button blue">ЗАПИСАТЬСЯ НА БЕСПЛАТНЫЙ УРОК</button>
+              </div>
+              <img class="absolute" src="images/iPhone.png" alt="">
             </div>
         </main>
         <footer class="footer">        
             <div class="container"></div>
         </footer>
     </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js" type="text/javascript"></script>
+
   </body>
 </html>
