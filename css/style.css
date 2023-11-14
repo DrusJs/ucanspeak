@@ -331,3 +331,9 @@ img.absolute {
     margin-top: -300px;
     pointer-events: none;
 }
+
+.rate-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
