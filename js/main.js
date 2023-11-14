@@ -1,4 +1,4 @@
-var swiper = new Swiper(".fit-tabs", {
+const swiper = new Swiper(".fit-tabs", {
     slidesPerView: 1,
     loop: true,
     centeredSlides: true,
@@ -7,7 +7,18 @@ var swiper = new Swiper(".fit-tabs", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  });
+});
+
+const swiperStudent = new Swiper(".students-swiper", {
+    slidesPerView: 3,
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 60,
+    navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+});
 
 function fitButtonsAction(button, slide) {
     if (!button.classList.contains("active")) {
