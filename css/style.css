@@ -1,0 +1,40 @@
+@font-face {
+    font-family: RobotoRegular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: RobotoMedium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+:root {
+    --font-regular: "RobotoRegular";
+    --font-medium: "RobotoMedium";
+    --font-bold: "RobotoBold";
+    --color-body-bg: #64BEF2;
+    --color-main-blue: #193B93;
+    --color-main-blue-hover: #2C4EA6;
+    --color-main-purple: #9B51A0;
+    --color-main-purple-hover: #b066b5;    
+    --color-main-grey: #EFEFEF;
+    --color-main-text: #2D2D2D;
+    --color-main-text-dark: #0C0D12;
+    --color-main-grey-hover: #E8E6E6;
+    --color-arrows-hover: #E17B04;
+    --drop-shadow-buttons: 5px 11px 14px 0px rgba(0, 0, 0, 0.21);
+    --gradient-button: linear-gradient(273deg, #E17B04 3.68%, #FFBC59 24.31%, #E98E05 100%);
+    --gradient-button-hover: linear-gradient(273deg, #E98E05 3.68%, #FFBC59 24.31%, #E17B04  100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--color-body-bg);
+}
