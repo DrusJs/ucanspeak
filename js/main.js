@@ -1,6 +1,5 @@
 const swiper = new Swiper(".fit-tabs", {
     slidesPerView: 1,
-    loop: true,
     centeredSlides: true,
     spaceBetween: 65,
     navigation: {
@@ -27,3 +26,13 @@ function fitButtonsAction(button, slide) {
         swiper.slideTo(slide)
     }
 }
+
+const accordions = document.querySelectorAll(".accordeon-block")
+accordions.forEach((el)=> {
+    el.querySelector(".accordeon-head").addEventListener("click", (e)=>{
+        if (document.querySelector(".accordeon-block.active")) {
+            document.querySelector(".accordeon-block.active").classList.remove("active")
+        }
+        e.currentTarget.parentElement.classList.toggle("active")
+    })
+})

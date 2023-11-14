@@ -38,7 +38,10 @@
 
 body {
     background-color: var(--color-body-bg);
-    padding-bottom: 100px;
+}
+
+body.white {
+    background-color: #FFFFFF;
 }
 
 .wrapper {
@@ -48,6 +51,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    position: relative;
 }
 
 .header {
@@ -140,11 +144,11 @@ body {
     background-color: var(--color-main-blue-hover);
     box-shadow: none;
 }
-.button.purple:hover {
-    background-color: var(--color-main-purple);
-}
 .button.purple {
     background-color: var(--color-main-purple-hover);
+}
+.button.purple:hover {
+    background-color: var(--color-main-purple);
     box-shadow: none;
 }
 .button.gradient {
@@ -152,6 +156,7 @@ body {
 }
 .button.gradient:hover {
     background: var(--gradient-button-hover);
+    box-shadow: none;
 }
 
 .about-block {
@@ -269,7 +274,7 @@ img.absolute {
     border-radius: 20px;
     box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    transition: 200ms;
+    transition: 260ms;
 }
 
 .fit-buttons__item.active {
@@ -279,9 +284,11 @@ img.absolute {
 }
 .fit-buttons__item:hover {
     background-color: var(--color-main-grey-hover) ;
+    box-shadow: none;
 }
 .fit-buttons__item.active:hover {
     background-color: var(--color-main-blue);
+    box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.25);
 }
 .flex {
     display: flex;
@@ -329,7 +336,12 @@ img.absolute {
 .fits-block .swiper-button-prev {
     left: -20px;
 }
-
+.swiper-button-next.swiper-button-disabled, 
+.swiper-button-prev.swiper-button-disabled {
+    opacity: .6;
+    cursor: auto;
+    pointer-events: none;
+  }
 .fit .button {
     max-width: 430px;
 }
@@ -511,6 +523,55 @@ img.absolute {
     border-radius: 100%;
 }
 
+.faq-block {
+
+}
+.accordeon-block {
+    border-bottom: 2px solid #C8C8C8;
+}
+.accordeon-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 30px 0;
+}
+.accordeon-title {
+    font-size: 28px;
+    font-family: var(--font-bold);
+    line-height: 120%;
+    color: #2D2D2D;
+}
+.accordeon-button {
+
+}
+.accordeon-button .bar {
+    width: 34px;
+    background-color: var(--color-main-blue);
+    height: 3px;
+    border-radius: 20px;
+    transition: 200ms;
+}
+.accordeon-block.active .accordeon-button .bar:nth-child(2) {
+    transform: translateY(-3px) rotate(0deg);
+}
+.accordeon-button .bar:nth-child(2) {
+    transform: translateY(-3px) rotate(90deg);
+}
+
+.accordeon-content {
+    max-height: 0px;
+    font-size: 18px;
+    font-family: var(--font-regular);
+    line-height: 120%;
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.accordeon-block.active .accordeon-content {
+    padding: 20px 0;
+    max-height: auto;
+}
 
 .cards {
     display: flex;
@@ -557,3 +618,64 @@ img.absolute {
 .footer {
     background-color: #4A4F5F;
 }
+
+
+/* levels.html */
+
+.back-button {    
+    width: 50px;
+    height: 25px; 
+    filter: drop-shadow(0px 2px 5px  rgba(0, 0, 0, 0.15));
+    background-image: url(../images/arrow-back.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.level-links {
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    flex-basis: 70%;
+}
+.level-links a {
+    margin-left: 120px;
+}
+.level-links .button {
+    width: 521px;
+    border-radius: 21px;
+}
+.level-links .button:nth-child(2) {
+    margin-top: 240px;
+}
+
+.signup-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    font-family: var(--font-bold);
+    line-height: 120%;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.bg-levels {
+    width: 1386px;
+    height: 1386px;
+    position: absolute;
+    top: -158px;
+    right: -530px;
+    background-color: var(--color-body-bg);
+    border-radius: 100%;
+    border: 41px solid #FFFFFF;
+    box-shadow: 0px 0px 0px 4px var(--color-body-bg);
+    display: flex;
+    align-items: center;
+    z-index: -1;
+}
+.bg-levels img {
+    margin-left: 10%;
+}
+/* levels.html END */
