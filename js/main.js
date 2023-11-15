@@ -34,7 +34,6 @@ accordions.forEach((el)=> {
         //     document.querySelector(".accordeon-block.active").classList.remove("active")
         // }
         e.currentTarget.parentElement.classList.toggle("active")
-        console.log(e.currentTarget.nextElementSibling.offsetHeight);
         if (e.currentTarget.parentElement.classList.contains("active")) {
             e.currentTarget.nextElementSibling.style.maxHeight = +e.currentTarget.nextElementSibling.scrollHeight+20 + "px"
         } else {            
@@ -42,3 +41,15 @@ accordions.forEach((el)=> {
         }
     })
 })
+
+function openModal(id) {
+    document.querySelector(`#${id}`).classList.add("active")
+    document.body.classList.add("noscroll")
+}
+
+function closeModal(event) {
+    if (event.target.classList.contains("modal-wrapper")) {
+        document.querySelector('.modal-wrapper.active').classList.remove("active")
+        document.body.classList.remove("noscroll")
+    }
+}
