@@ -31,8 +31,7 @@
     --color-main-grey-hover: #E8E6E6;
     --color-arrows-hover: #E17B04;
     --drop-shadow-buttons: 5px 11px 14px 0px rgba(0, 0, 0, 0.21);
-    --gradient-button: linear-gradient(273deg, #E17B04 0%, #FFBC59 24%, #E98E05 100%);
-    --gradient-button-hover: linear-gradient(273deg, #E98E05 0%, #FFBC59 76%, #E17B04  100%);
+    --gradient-button: linear-gradient(273deg, #E17B04 0%, #FFBC59 24%, #E98E05 90%, #E17B04 100%);
 }
 
 * {
@@ -122,7 +121,7 @@ body.white {
 }
 
 .main-block {
-    max-width: 535px;
+    max-width: 545px;
     width: 100%;
     margin-left: -300px;
     margin-top: 60px;
@@ -153,6 +152,7 @@ body.white {
     box-shadow: var(--drop-shadow-buttons);
     cursor: pointer;
     transition: 260ms ease-in-out;
+    letter-spacing: -1px;
 }
 .button.blue {
     background-color: var(--color-main-blue);
@@ -169,10 +169,10 @@ body.white {
     box-shadow: none;
 }
 .button.gradient {
-    background: var(--gradient-button);
+    background-image: var(--gradient-button);
 }
 .button.gradient:hover {
-    background: var(--gradient-button-hover);
+    background-position: -160px 0;
     box-shadow: none;
 }
 
@@ -180,8 +180,8 @@ body.white {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0 30px;
-    margin: 250px 0;
+    padding: 24px 0 83px;
+    margin: 366px 0 250px;
 }
 .white-block {    
     background-color: #F7F7F7;
@@ -196,6 +196,7 @@ body.white {
     text-transform: uppercase;
     white-space: nowrap;
     text-align: center;
+    letter-spacing: -3px;
 }
 .text {
     color: #FFFFFF;
@@ -210,19 +211,20 @@ body.white {
     color: var(--color-main-blue);
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: -3px;
 }
 
 .about-cards {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
+    gap: 57px;
     color: var(--color-main-text);
     margin-top: 90px;
 }
 
 .about-cards__item {
     position: relative;
-    padding: 160px 30px 42px 30px;
+    padding: 160px 36px 42px 36px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,6 +244,7 @@ body.white {
     font-family: var(--font-bold);
     line-height: 120%;
     text-align: center;
+    letter-spacing: -1px;
 }
 
 .about-cards__item-text {
@@ -249,12 +252,13 @@ body.white {
     font-family: var(--font-regular);
     line-height: 120%;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 6px;
+    letter-spacing: -1px;
 }
 
 
 .container.method {
-    margin: 180px 0;
+    padding-top: 36px;
     padding-bottom: 450px;
 }
 .method-block {
@@ -263,7 +267,9 @@ body.white {
 }
 
 .method-block__text {
-    margin: 10px 0 50px 0;
+    margin: 2px 0 50px 0;
+    letter-spacing: -1px;
+    line-height: 106%;
 }
 
 img.absolute {
@@ -274,16 +280,17 @@ img.absolute {
 }
 
 .fits-block {
-    padding: 0px 160px 0px;
+    padding: 25px 160px 256px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 285px 0 18px;
 }
 
 .fit-buttons {
     display: flex;
     gap: 27px;
-    margin: 42px 0 100px 0;
+    margin: 27px 0 100px 0;
 }
 .fit-buttons__item {
     font-size: 24px;
@@ -361,7 +368,7 @@ img.absolute {
 }
 .swiper-button-next.swiper-button-disabled, 
 .swiper-button-prev.swiper-button-disabled {
-    opacity: .6;
+    opacity: 1;
     cursor: auto;
     pointer-events: none;
   }
@@ -370,12 +377,14 @@ img.absolute {
 }
 .bg-block {
     width: 100%;
-    margin-top: -170px;
+    margin-top: -472px;
     pointer-events: none;
     z-index: 1;
     position: relative;
 }
-
+.container.rate {
+    padding-top: 36px;
+}
 .rate-block {
     display: flex;
     flex-direction: column;
@@ -384,6 +393,9 @@ img.absolute {
 
 .rate-cards {
     display: flex;
+    justify-content: space-between;
+    max-width: 1080px;
+    width: 100%;
     gap: 20px;
     margin: 60px 0 100px 0;
 }
@@ -394,6 +406,7 @@ img.absolute {
     align-items: center;
     padding: 34px 77px 0 77px;
     background-color: #FFFFFF;
+    border-radius: 10px;
 }
 
 .rate-cards__item-title {
@@ -452,6 +465,7 @@ img.absolute {
 
 .rate-subscribe {
     width: 100%;
+    max-width: 1080px;
     background-color: #FFEEC2;
     filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
@@ -471,8 +485,8 @@ img.absolute {
 .rate-subscribe-price {
     color: #444444;
     font-family: var(--font-bold);
-    font-size: 46px;
-    margin-bottom: 30px;
+    font-size: 50px;
+    margin-bottom: 14px;
     line-height: 120%;
 }
 .rate-subscribe .button {
@@ -481,8 +495,8 @@ img.absolute {
 }
 
 .request-block {
-    padding: 10px 0 30px;
-    margin: 320px 0 250px 0;
+    padding: 64px 0 42px;
+    margin: 370px 0 288px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -490,7 +504,7 @@ img.absolute {
 .request-block .button {
     width: 473px;
     margin: 0 auto;
-    margin-top: 36px;
+    margin-top: 30px;
 }
 
 .container.students {
@@ -498,10 +512,13 @@ img.absolute {
 }
 .students-block .swiper {
     border-radius: 20px;
-    padding: 120px 160px 40px;
+    padding: 104px 160px 40px;
     font-family: var(--font-regular);
 }
-
+.students-block .title {
+    font-size: 55px;
+    letter-spacing: -1px;
+}
 .students-block .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -581,7 +598,7 @@ img.absolute {
 }
 
 .faq-block {
-    padding: 20px 0;
+    padding: 70px 0 86px;
     margin: 320px 0 250px 0;
 }
 .faq-block .subtitle {
@@ -636,14 +653,18 @@ img.absolute {
     max-height: auto;
 }
 .cards-container {
-    margin: 100px 0;
+    padding: 40px 0 94px
+}
+.cards-container .title {
+    font-size: 55px;
+    letter-spacing: -1px;
 }
 .cards {
     display: flex;
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: center;
+    gap: 57px;
     color: var(--color-main-text);
-    margin-top: 90px;
+    margin-top: 105px;
 }
 
 .cards__item {
@@ -667,13 +688,15 @@ img.absolute {
     font-family: var(--font-bold);
     line-height: 120%;
     text-align: center;
+    letter-spacing: -1px;
 }
 .cards__item-text {
-    font-size: 18px;
+    font-size: 20px;
     font-family: var(--font-regular);
     line-height: 120%;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 6px;
+    letter-spacing: -1px;
 }
 .cards-container .button {
     max-width: 430px;
