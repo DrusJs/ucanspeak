@@ -728,6 +728,7 @@ img.absolute {
     opacity: 0;
     transition: 300ms ease-in-out;
     padding: 0 50px 0 10px;
+    will-change: max-height;
 }
 
 .accordeon-block.active .accordeon-content {
@@ -1042,6 +1043,12 @@ img.absolute {
         padding: 0 80px;
         position: relative;
     }
+    .main-block {
+        max-width: 419px;
+        width: 100%;
+        margin-left: -168px;
+        margin-top: 10px;
+    }
     .fits-block {
         padding: 25px 80px 256px;
     }
@@ -1156,6 +1163,9 @@ img.absolute {
     .accordeon-button .bar:nth-child(2) {
         transform: translateY(-2px) rotate(90deg);
     }
+    .accordeon-block.active .accordeon-button .bar:nth-child(2) {        
+        transform: translateY(-2px) rotate(0deg);
+    }
     .footer {
         padding: 0 50px;
     }
@@ -1186,6 +1196,9 @@ img.absolute {
     .container {
         padding: 0 60px;
         position: relative;
+    }
+    .main-block {
+        max-width: 341px;
     }
     .fits-block {
         padding: 25px 60px 256px;
@@ -1346,7 +1359,7 @@ img.absolute {
         position: absolute;
         bottom: -26px;
         left: 42px;
-        max-width: 80vw;
+        max-width: calc(100% - 84px);
     }
     .button {
         font-size: 22px;
@@ -1461,6 +1474,9 @@ img.absolute {
     }
     .accordeon-button .bar:nth-child(2) {
         transform: translateY(-2px) rotate(90deg);
+    }
+    .accordeon-block.active .accordeon-button .bar:nth-child(2) {        
+        transform: translateY(-1px) rotate(0deg);
     }
     .footer {
         padding: 0 40px;
