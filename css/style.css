@@ -519,6 +519,7 @@ img.absolute {
     padding: 0 80px;
 }
 .students-block .swiper {
+    max-width: 1480px;
     border-radius: 20px;
     padding: 104px 160px 40px;
     font-family: var(--font-regular);
@@ -626,6 +627,7 @@ img.absolute {
     align-items: center;
     cursor: pointer;
     padding: 30px 0;
+    gap: 20px;
 }
 .accordeon-title {
     font-size: 32px;
@@ -651,17 +653,20 @@ img.absolute {
 }
 
 .accordeon-content {
-    max-height: 0px;
-    font-size: 18px;
+    height: 100%;
+    max-height: 0;
+    font-size: 22px;
     font-family: var(--font-regular);
     line-height: 120%;
     overflow: hidden;
-    transition: max-height 300ms;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+    padding: 0 0 0 10px;
 }
 
 .accordeon-block.active .accordeon-content {
-    padding: 20px 0;
-    max-height: auto;
+    opacity: 1;
+    padding: 0 0 20px 10px;
 }
 .cards-container {
     padding: 40px 0 94px
@@ -721,6 +726,7 @@ img.absolute {
     align-items: center;
     min-height: 100px;
     margin-top: 200px;
+    padding: 0 160px;
     position: relative;
 }
 
@@ -784,3 +790,74 @@ img.absolute {
     margin-left: 10%;
 }
 /* levels.html END */
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 490px;
+    padding: 0 0 32px 0;
+    position: relative;
+}
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    list-style: none;
+}
+.privacy-police {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    list-style: none;
+    margin-top: 30px;
+}
+.links-list__item a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: var(--font-regular);
+    line-height: 120%;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    transition: 260ms ease-in-out;
+}
+
+.privacy-police p {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: var(--font-regular);
+    line-height: 120%;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    transition: 260ms ease-in-out;
+}
+.links-list__item:hover a {
+    color: #b4b4b4;
+}
+.social-links {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.work-time {
+    font-size: 20px;
+    font-family: var(--font-regular);
+    line-height: 120%;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    margin-top: 24px;
+}
+.download-app {
+    position: absolute;
+    bottom: 65px;
+    right: 0;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}

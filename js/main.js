@@ -34,5 +34,11 @@ accordions.forEach((el)=> {
         //     document.querySelector(".accordeon-block.active").classList.remove("active")
         // }
         e.currentTarget.parentElement.classList.toggle("active")
+        console.log(e.currentTarget.nextElementSibling.offsetHeight);
+        if (e.currentTarget.parentElement.classList.contains("active")) {
+            e.currentTarget.nextElementSibling.style.maxHeight = +e.currentTarget.nextElementSibling.scrollHeight+20 + "px"
+        } else {            
+            e.currentTarget.nextElementSibling.style.maxHeight = "0px"
+        }
     })
 })
