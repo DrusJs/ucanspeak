@@ -55,6 +55,7 @@ body.white {
     flex-direction: column;
     margin: 0 auto;
     position: relative;
+    overflow-x: hidden;
 }
 
 
@@ -729,12 +730,16 @@ img.absolute {
     padding: 0 160px;
     position: relative;
 }
+.footer.levels {
+    margin-top: 1000px;
+}
 
 
 /* levels.html */
 
 .back-button {    
     width: 50px;
+    min-width: 50px;
     height: 25px; 
     filter: drop-shadow(0px 2px 5px  rgba(0, 0, 0, 0.15));
     background-image: url(../images/arrow-back.svg);
