@@ -13,7 +13,13 @@
   <body>
     <div class="wrapper">
         <header class="header">
-            <a href="levels.html"><img src="images/logo.svg" alt="UCANSPEAK"></a>
+            <a href="levels.html">
+              <picture class="logotip">
+                <source	media="(max-width: 600px)" srcset="images/logo-mobile.svg">
+                <source	media="(max-width: 1400px)" srcset="images/logo-medium.svg">			
+                <img src="images/logo.svg" alt="UCANSPEAK" />			
+              </picture> 
+            </a>
             <div class="burger-button" id="burger-button" onclick="this.classList.toggle('active')">
               <div class="bar"></div>
               <div class="bar"></div>
@@ -28,7 +34,12 @@
         </header>
         <main class="main top">
             <div class="container main-container center">
-              <img src="images/bg-main.png" alt="">
+              <picture>
+                <source	media="(max-width: 600px)" srcset="images/bg-main-mobile.png">
+                <source	media="(max-width: 1400px)" srcset="images/bg-main-medium.png">			
+                <img src="images/bg-main.png" alt="" />			
+              </picture> 
+              <!-- <img src="images/bg-main.png" alt=""> -->
               <div class="main-block">
                 <p class="main-block__text">НАУЧИМ ГОВОРИТЬ НА ЛЮБЫЕ ТЕМЫ И УВЕРЕННО ОБЩАТЬСЯ ЗАГРАНИЦЕЙ</p>
                 <a href="/" class="main-block__button button blue" onclick="openModal('feedback-modal')">Начать обучение</a>

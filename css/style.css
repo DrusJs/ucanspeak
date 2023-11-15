@@ -382,11 +382,17 @@ img.absolute {
 .fits-block .swiper-slide {
     text-align: center;
     padding: 0 20px;
+    opacity: 0;
     font-size: 24px;
     font-family: var(--font-regular);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 200ms;
+}
+
+.fits-block .swiper-slide.swiper-slide-active {
+    opacity: 1;
 }
 
 .fits-block .swiper-button-next,     
@@ -717,12 +723,12 @@ img.absolute {
     overflow: hidden;
     opacity: 0;
     transition: 300ms ease-in-out;
-    padding: 0 0 0 10px;
+    padding: 0 50px 0 10px;
 }
 
 .accordeon-block.active .accordeon-content {
     opacity: 1;
-    padding: 0 0 20px 10px;
+    padding: 0 50px 20px 10px;
 }
 .cards-container {
     padding: 140px 0 160px;
@@ -1018,26 +1024,48 @@ img.absolute {
     color: var(--color-main-blue);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1400px) {
     .container {
         padding: 0 80px;
         position: relative;
-      }
+    }
     .main-block__text {
         font-size: 24px;
     }
+    .burger-button .bar {
+        width: 37px;
+        height: 5px;
+    }    
+    .burger-button.active .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }    
+    .burger-button.active .bar:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
     .button {
         font-size: 24px;
+        height: 58px;
+        padding: 16px 30px 18px 30px;
     }
     .title, .subtitle {
         font-size: 32px;  
         letter-spacing: -1px;
+    }
+    .about-cards__item {
+        padding: 80px 30px 42px 30px;;
+    }
+    .about-cards__item img {
+        width: 170px;
+        top: -80px;
     }
     .about-cards__item-title {
         font-size: 20px;
     }
     .about-cards__item-text {
         font-size: 18px;
+    }
+    .method-block__text {
+        max-width: 300px;
     }
     .text {
         font-size: 20px;
@@ -1107,22 +1135,33 @@ img.absolute {
     }
     .accordeon-button .bar:nth-child(2) {
         transform: translateY(-2px) rotate(90deg);
-      }
+    }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 990px) {
     .container {
         padding: 0 60px;
         position: relative;
-      }
+    }
     .main-block__text {
         font-size: 20px;
     }
     .method-block .title {
         font-size: 28px;
     }
+    .about-cards__item img {
+        width: 120px;
+        top: -60px;
+    }
+    .about-cards__item-title {
+        font-size: 20px;
+    }
+    .about-cards__item-text {
+        font-size: 16px;
+    }
     .title, .subtitle {
         font-size: 28px;
+        white-space: normal;
     }
     .fit-buttons__item {
         font-size: 16px;
@@ -1132,40 +1171,70 @@ img.absolute {
     }
     .rate-cards__item-row-text {
         font-size: 16px;
-      }
+    }
     .rate-cards__item-row-head {
         font-size: 14px;
-      }
-      .students-block .title,
-      .faq-block .subtitle {
+    }
+    .students-block .title,
+    .faq-block .subtitle {
         font-size: 28px;
-      }
-      .accordeon-title {
+    }
+    .accordeon-title {
         font-size: 16px;
-      }
-      .accordeon-content {
+    }
+    .accordeon-content {
         font-size: 16px;
-      }
-      .cards-container .title {
+    }
+    .cards-container .title {
         font-size: 28px;
-      }
-      .cards__item-text {
+    }
+    .cards__item-text {
         font-size: 16px;
-      }
-      .links-list__item a,
-      .privacy-police p,
-      .work-time {
-          font-size: 14px;
-      }      
+    }
+    .links-list__item a,
+    .privacy-police p,
+    .work-time {
+        font-size: 14px;
+    }      
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
     .container {
         padding: 0 40px;
         position: relative;
+    }
+    .burger-button {
+        gap: 4px;
       }
-    .about-cards {
+    .burger-button .bar {
+        width: 26px;
+        height: 4px;
+    }    
+    .burger-button.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }    
+    .burger-button.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    .main-block__text {
+        position: absolute;
+        top: 0;
+    }
+    .main-block__button {
+        position: absolute;
+        bottom: -30px;
+        max-width: 70vw;
+    }
+    .button {
+        font-size: 22px;
+        height: 53px;
+    }
+    .main-block__text {
+        color: var(--color-main-blue);
+    }
+    .about-cards, .cards {
         flex-direction: column;
+        align-items: center;
     }
 
     .accordeon-button .bar {
