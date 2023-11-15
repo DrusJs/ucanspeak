@@ -14,12 +14,17 @@
     font-family: TTCommonsDemiBold;
     src: url(../fonts/TTCommons-DemiBold.ttf);
 }
+@font-face {
+    font-family: TTCommonsLight;
+    src: url(../fonts/TTCommons-Light.ttf);
+}
 
 :root {
     --font-regular: "TTCommonsRegular";
     --font-medium: "TTCommonsMedium";
     --font-bold: "TTCommonsBold";
     --font-demibold: "TTCommonsDemiBold";
+    --font-light: "TTCommonsLight";
     --color-body-bg: #64BEF2;
     --color-main-blue: #193B93;
     --color-main-blue-hover: #2C4EA6;
@@ -624,7 +629,7 @@ img.absolute {
 
 .student-card__description {
     font-size: 18px;
-    font-family: var(--font-regular);
+    font-family: var(--font-light);
     text-align: left;
 }
 
@@ -966,7 +971,7 @@ img.absolute {
     margin-top: 35px;
     color: var(--color-main-blue);
     font-size: 18px;
-    font-family: var(--font-demibold);
+    font-family: var(--font-medium);
 }
 
 .modal a {
