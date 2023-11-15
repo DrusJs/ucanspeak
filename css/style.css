@@ -559,6 +559,7 @@ img.absolute {
     align-items: center;
     opacity: 0;
     max-width: 394px;
+    transition: 200ms ease-in-out;
 }
 .students-block .swiper-slide.swiper-slide-prev,
 .students-block .swiper-slide.swiper-slide-active,
@@ -905,7 +906,8 @@ img.absolute {
 
 .modal-wrapper {
     position: fixed;
-    display: none;
+    display: flex;
+    opacity: 0;
     align-items: center;
     justify-content: center;
     top: 0px;
@@ -913,11 +915,14 @@ img.absolute {
     width: 100%;
     height: 100%;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.22);
+    transition: 300ms ease-in-out;
+    pointer-events: none;
 }
 
 .modal-wrapper.active {
-    display: flex;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .modal {
@@ -933,6 +938,8 @@ img.absolute {
     text-align: center;
     line-height: 120%;
     color: var(--color-main-blue);
+    margin-bottom: 9px;
+    letter-spacing: -1px;
 }
 .modal .input {
     width: 100%;
@@ -940,7 +947,7 @@ img.absolute {
     font-size: 28px;
     font-family: var(--font-regular);
     line-height: 120%;
-    padding: 16px 27px 18px;
+    padding: 16px 27px 12px;
     outline: 0;
     border: 2px solid var(--color-main-blue);
     color: var(--color-main-blue);
@@ -962,6 +969,7 @@ img.absolute {
     font-size: 28px;
     padding: 13px 30px 18px 30px;
     margin-top: 17px;
+    text-transform: none;
 }
 .modal .input::placeholder {
     color: rgba(25, 59, 147, 0.43); 
