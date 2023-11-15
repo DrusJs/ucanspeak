@@ -49,7 +49,6 @@ body.white {
 }
 
 .wrapper {
-    max-width: 1728px;
     width: 100%;
     min-height: 100%;
     display: flex;
@@ -60,19 +59,25 @@ body.white {
 
 
 .top-bg {
+    width: 100%;
+    min-width: 1728px;
     position: absolute;
     top: -240px;
     pointer-events: none;
 }
 .top-bg-purple {
+    width: 100%;
+    min-width: 1728px;
     position: absolute;
     top: -220px;
     pointer-events: none;
 }
 .bottom-bg {
     position: absolute;
+    min-width: 1728px;
     bottom: -240px;
     pointer-events: none;
+    width: 100%;
 }
 .header {
     padding: 38px 82px;
@@ -375,7 +380,7 @@ img.absolute {
 .fit .button {
     max-width: 430px;
 }
-.bg-block {
+.bg-block img {
     width: 100%;
     margin-top: -472px;
     pointer-events: none;
@@ -600,6 +605,9 @@ img.absolute {
 .faq-block {
     padding: 70px 0 86px;
     margin: 320px 0 250px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .faq-block .subtitle {
     margin-bottom: 20px ;
