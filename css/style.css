@@ -1,16 +1,4 @@
 @font-face {
-    font-family: RobotoRegular;
-    src: url(../fonts/Roboto-Regular.ttf);
-}
-@font-face {
-    font-family: RobotoBold;
-    src: url(../fonts/Roboto-Bold.ttf);
-}
-@font-face {
-    font-family: RobotoMedium;
-    src: url(../fonts/Roboto-Medium.ttf);
-}
-@font-face {
     font-family: TTCommonsRegular;
     src: url(../fonts/TTCommons-Regular.ttf);
 }
@@ -31,6 +19,7 @@
     --font-regular: "TTCommonsRegular";
     --font-medium: "TTCommonsMedium";
     --font-bold: "TTCommonsBold";
+    --font-bold: "TTCommonsDemiBold";
     --color-body-bg: #64BEF2;
     --color-main-blue: #193B93;
     --color-main-blue-hover: #2C4EA6;
