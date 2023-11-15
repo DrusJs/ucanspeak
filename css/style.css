@@ -178,6 +178,7 @@ body.white {
     border-radius: 37px;
     box-shadow: var(--drop-shadow-buttons);
     cursor: pointer;
+    white-space: nowrap;
     transition: 260ms ease-in-out;
     letter-spacing: -1px;
 }
@@ -428,7 +429,7 @@ img.absolute {
 .bg-block {
     max-height: 0;
 }
-.bg-block img {
+.bg-block picture {
     width: 100%;
     margin-top: -472px;
     pointer-events: none;
@@ -1025,9 +1026,18 @@ img.absolute {
 }
 
 @media screen and (max-width: 1400px) {
+    .header {
+        padding: 38px 50px;
+    }
+    .students-block .swiper {
+        padding: 104px 60px 40px;
+    }
     .container {
         padding: 0 80px;
         position: relative;
+    }
+    .fits-block {
+        padding: 25px 80px 256px;
     }
     .main-block__text {
         font-size: 24px;
@@ -1051,10 +1061,10 @@ img.absolute {
         font-size: 32px;  
         letter-spacing: -1px;
     }
-    .about-cards__item {
-        padding: 80px 30px 42px 30px;;
+    .about-cards__item, .cards__item {
+        padding: 80px 30px 42px 30px;
     }
-    .about-cards__item img {
+    .about-cards__item img, .cards__item img {
         width: 170px;
         top: -80px;
     }
@@ -1109,6 +1119,9 @@ img.absolute {
     .faq-block .subtitle {
         font-size: 32px;
     }
+    .accordeon-head {
+        padding: 20px 0;
+    }
     .accordeon-content {
         font-size: 18px;
     }
@@ -1139,9 +1152,31 @@ img.absolute {
 }
 
 @media screen and (max-width: 990px) {
+    .top-bg {
+        min-width: 1000px;
+        top: -130px;
+    }
+    .top-bg-purple {        
+        min-width: 1000px;
+        top: -100px;
+    }
+    .bottom-bg {        
+        min-width: 1000px;
+        bottom: -110px;
+    }
+    .about-block {
+        margin: 240px 0 0px;
+        padding: 12px 0 13px;
+    }
     .container {
         padding: 0 60px;
         position: relative;
+    }
+    .fits-block {
+        padding: 25px 60px 256px;
+    }
+    .accordeon-head {
+        padding: 15px 0;
     }
     .main-block__text {
         font-size: 20px;
@@ -1149,8 +1184,9 @@ img.absolute {
     .method-block .title {
         font-size: 28px;
     }
-    .about-cards__item img {
-        width: 120px;
+
+    .about-cards__item img, .cards__item img {
+        width: 140px;
         top: -60px;
     }
     .about-cards__item-title {
@@ -1162,6 +1198,7 @@ img.absolute {
     .title, .subtitle {
         font-size: 28px;
         white-space: normal;
+        letter-spacing: 0;
     }
     .fit-buttons__item {
         font-size: 16px;
@@ -1199,13 +1236,33 @@ img.absolute {
 }
 
 @media screen and (max-width: 600px) {
+    .header {
+        padding: 38px 42px;
+    }
+    .container.method {
+        padding-top: 118px;
+        padding-bottom: 45px;
+        text-align: center;
+    }
+    .method-block .title {
+        text-align: center;
+    }
+    .method-block__text {
+        max-width: 100%;
+        margin: 5px 0 540px 0;
+    }
+    img.absolute {
+        width: 700px;
+        top: 115px;
+        right: -16%;
+    }
     .container {
         padding: 0 40px;
         position: relative;
     }
     .burger-button {
         gap: 4px;
-      }
+    }
     .burger-button .bar {
         width: 26px;
         height: 4px;
@@ -1222,29 +1279,125 @@ img.absolute {
     }
     .main-block__button {
         position: absolute;
-        bottom: -30px;
-        max-width: 70vw;
+        bottom: -88px;
+        left: 42px;
+        max-width: 80vw;
     }
     .button {
         font-size: 22px;
         height: 53px;
     }
+    .button.small {
+        padding: 18px 12px 18px 12px;
+        font-size: 18px;
+    }
     .main-block__text {
         color: var(--color-main-blue);
+    }
+    .request-block .subtitle {
+        max-width: 340px;
+    }
+    .request-block .button {
+        width: 340px;
+    }
+    .rate-cards {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .rate-subscribe .button {
+        width: 240px;
+    }
+    .request-block {
+        padding: 47px 0 42px;
+        margin: 10px 0 10px 0;
+    }
+    .container.students {
+        padding: 100px 35px 0;
+    }
+    .students-block .swiper {
+        padding: 104px 25px 40px;
+    }
+    .students-block .swiper-button-next::after, .students-block .swiper-button-prev::after {
+        font-size: 16px;
+        line-height: 33px;
+    }
+    .students-block .swiper-button-next, .students-block .swiper-button-prev {
+        width: 33px;
+        height: 33px;
+    }
+    .students-block .title {
+        font-size: 26px;
+        line-height: 94%;
+    }
+    .faq-block {
+        padding: 44px 0 24px;
+        margin: 51px 0 116px 0;
+    }
+    .about-cards__item img, .cards__item img {
+        width: 100px;
+        top: -50px;
+    }
+    .cards__item {
+        padding: 70px 30px 22px 30px;
+        border-radius: 42px;
+    }
+    .accordeon-head {
+        padding: 10px 0;
+    }
+    .cards-container .title {
+        font-size: 23px;
     }
     .about-cards, .cards {
         flex-direction: column;
         align-items: center;
     }
-
+    .about-cards {
+        gap: 57px;
+        margin-top: 52px;
+    }
     .accordeon-button .bar {
         width: 14px;
-        height: 1.5px;
+        height: 2px;
     }
     .accordeon-button .bar:nth-child(2) {
-        transform: translateY(-1px) rotate(90deg);
+        transform: translateY(-2px) rotate(90deg);
+    }
+    .footer {
+        padding: 0 40px;
+    }
+    .footer .container {
+        flex-direction: column;
+        min-height: 545px;
+    }
+    .social-links {
+        align-self: center;
+    }
+    .social-list {        
+        transform: scale(0.8);
+    }
+    .download-app {
+        flex-direction: column;
+        gap: 0;
+        bottom: auto;
+        top: -20px;
+        right: -20px;
+        transform: scale(0.6);
+    }
+    .privacy-police {
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 50px;
+        margin-top: 30px;
+    }
+    .links-list__item a, .work-time {
+        letter-spacing: 0;
     }
     .privacy-police p {
         font-size: 12px;
-    } 
+        letter-spacing: 0;
+    }
+    .privacy-police p:nth-child(3),
+    .privacy-police p:nth-child(4) {
+        text-align: right;
+    }
 }

@@ -12,11 +12,19 @@ const swiperStudent = new Swiper(".students-swiper", {
     slidesPerView: 3,
     loop: true,
     centeredSlides: true,
-    spaceBetween: 60,
+    spaceBetween: 50,
     navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        220: {
+            slidesPerView: 1,
         },
+        601: {
+            slidesPerView: 3,
+        }
+    }
 });
 
 function fitButtonsAction(button, slide) {
