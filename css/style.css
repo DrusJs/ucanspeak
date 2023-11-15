@@ -61,15 +61,19 @@ body.white {
 
 
 .top-bg {
-    position: relative;
-    bottom: 150px;
+    position: absolute;
+    top: -240px;
+    pointer-events: none;
+}
+.top-bg-purple {
+    position: absolute;
+    top: -220px;
     pointer-events: none;
 }
 .bottom-bg {
-    position: relative;
-    top: 140px;
+    position: absolute;
+    bottom: -240px;
     pointer-events: none;
-    z-index: -1;
 }
 .header {
     padding: 38px 82px;
@@ -176,9 +180,11 @@ body.white {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px 0 30px;
 }
 .white-block {    
     background-color: #F7F7F7;
+    position: relative;
 }
 
 .title {
@@ -362,8 +368,10 @@ img.absolute {
 }
 .bg-block {
     width: 100%;
-    margin-top: -300px;
+    margin-top: -170px;
     pointer-events: none;
+    z-index: 1;
+    position: relative;
 }
 
 .rate-block {
@@ -469,8 +477,11 @@ img.absolute {
 }
 
 .request-block {
-    margin: 160px 0 110px 0;
-    padding: 180px 0 140px 0;
+    padding: 10px 0 30px;
+    margin: 320px 0 250px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .request-block .button {
     width: 473px;
@@ -478,9 +489,12 @@ img.absolute {
     margin-top: 36px;
 }
 
+.container.students {
+    padding: 0 80px;
+}
 .students-block .swiper {
     border-radius: 20px;
-    padding: 120px 60px 40px;
+    padding: 120px 160px 40px;
     font-family: var(--font-regular);
 }
 
@@ -491,6 +505,13 @@ img.absolute {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    max-width: 394px;
+}
+.students-block .swiper-slide.swiper-slide-prev,
+.students-block .swiper-slide.swiper-slide-active,
+.students-block .swiper-slide.swiper-slide-next {
+    opacity: 1;
 }
 
 .students-block .swiper-button-next,     
@@ -556,7 +577,8 @@ img.absolute {
 }
 
 .faq-block {
-    padding: 80px 160px;
+    padding: 20px 0;
+    margin: 320px 0 250px 0;
 }
 .faq-block .subtitle {
     margin-bottom: 20px ;
