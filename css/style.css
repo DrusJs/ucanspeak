@@ -67,6 +67,11 @@ body.white {
     margin: 0 auto;
     position: relative;
     overflow-x: hidden;
+    background-image: url(../images/bgcrcl-main.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    z-index: 0;
 }
 
 
@@ -133,7 +138,9 @@ body.white {
     padding: 0 160px;
     position: relative;
 }
+.main-container {
 
+}
 .container.center {
     display: flex;
     justify-content: center;
@@ -201,7 +208,7 @@ body.white {
     flex-direction: column;
     align-items: center;
     padding: 24px 0 83px;
-    margin: 366px 0 250px;
+    margin: 366px 0 130px;
 }
 .white-block {    
     background-color: #F7F7F7;
@@ -278,14 +285,20 @@ body.white {
 
 
 .container.method {
-    padding-top: 36px;
-    padding-bottom: 450px;
+    padding-top: 156px;
+    padding-bottom: 620px;
+    background-image: url(../images/bgcrcl-method.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 }
 .method-block {
     max-width: 593px;
     position: relative;
 }
-
+.method-block .title {
+    text-align: left;
+}
 .method-block__text {
     margin: 2px 0 50px 0;
     letter-spacing: -1px;
@@ -294,7 +307,7 @@ body.white {
 
 img.absolute {
     position: absolute;
-    top: -150px;
+    top: 0px;
     pointer-events: none;
     right: 5%;
 }
@@ -304,7 +317,7 @@ img.absolute {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 285px 0 18px;
+    margin: 112px 0 18px;
 }
 
 .fit-buttons {
@@ -368,6 +381,7 @@ img.absolute {
 
 .fits-block .swiper-slide {
     text-align: center;
+    padding: 0 20px;
     font-size: 24px;
     font-family: var(--font-regular);
     display: flex;
@@ -405,6 +419,9 @@ img.absolute {
 .fit .button {
     max-width: 430px;
 }
+.bg-block {
+    max-height: 0;
+}
 .bg-block img {
     width: 100%;
     margin-top: -472px;
@@ -413,7 +430,12 @@ img.absolute {
     position: relative;
 }
 .container.rate {
-    padding-top: 36px;
+    padding-top: 490px;
+    padding-bottom: 180px;
+    background-image: url(../images/bgcrcl-rate.png);
+    background-repeat: no-repeat;
+    background-position: 0 100px ;
+    background-size: cover;
 }
 .rate-block {
     display: flex;
@@ -526,7 +548,7 @@ img.absolute {
 
 .request-block {
     padding: 64px 0 42px;
-    margin: 370px 0 288px 0;
+    margin: 180px 0 188px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -538,7 +560,11 @@ img.absolute {
 }
 
 .container.students {
-    padding: 0 80px;
+    padding: 100px 80px 200px;
+    background-image: url(../images/bgcrcl-students.png);
+    background-repeat: no-repeat;
+    background-position: 0 100px;
+    background-size: cover;
 }
 .students-block .swiper {
     max-width: 1480px;
@@ -575,6 +601,7 @@ img.absolute {
     color: #FFFFFF;
     border-radius: 50%;
     transition: 260ms ease-in-out;
+    box-shadow: 0px 0px 0px 6px var(--color-body-bg);
 }
 .students-block .swiper-button-next:hover,     
 .students-block .swiper-button-prev:hover {
@@ -636,7 +663,7 @@ img.absolute {
 
 .faq-block {
     padding: 70px 0 86px;
-    margin: 320px 0 250px 0;
+    margin: 120px 0 150px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -662,6 +689,7 @@ img.absolute {
     font-family: var(--font-demibold);
     line-height: 120%;
     color: #2D2D2D;
+    user-select: none;
 }
 .accordeon-button {
 
@@ -697,7 +725,11 @@ img.absolute {
     padding: 0 0 20px 10px;
 }
 .cards-container {
-    padding: 40px 0 94px
+    padding: 140px 0 160px;
+    background-image: url(../images/bgcrcl-cards.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 .cards-container .title {
     font-size: 55px;
@@ -753,7 +785,7 @@ img.absolute {
     flex-direction: column;
     align-items: center;
     min-height: 100px;
-    margin-top: 200px;
+    margin-top: 140px;
     padding: 0 160px;
     position: relative;
 }
@@ -984,4 +1016,166 @@ img.absolute {
 
 .modal a {
     color: var(--color-main-blue);
+}
+
+@media screen and (max-width: 1300px) {
+    .container {
+        padding: 0 80px;
+        position: relative;
+      }
+    .main-block__text {
+        font-size: 24px;
+    }
+    .button {
+        font-size: 24px;
+    }
+    .title, .subtitle {
+        font-size: 32px;  
+        letter-spacing: -1px;
+    }
+    .about-cards__item-title {
+        font-size: 20px;
+    }
+    .about-cards__item-text {
+        font-size: 18px;
+    }
+    .text {
+        font-size: 20px;
+    }
+    .fit-buttons__item {
+        font-size: 20px;
+    }
+    .fits-block .swiper-slide {
+        font-size: 18px;
+    }
+    .rate-cards__item {
+        padding: 34px 55px 0 55px;
+    }
+    .rate-cards__item-title {
+        font-size: 20px;
+    }
+    .rate-cards__item-row-text {
+        font-size: 18px;
+    }
+    .rate-cards__item-row {
+        width: 193px;
+    }
+    .rate-cards__item-row-head {
+        font-size: 15px;
+    }
+    .rate-cards__item-price .price {
+        font-size: 30px;
+    }
+    .rate-cards__item-price .subprice {
+        font-size: 20px;
+    }
+    .rate-subscribe-title {
+        font-size: 20px;
+    }
+    .rate-subscribe-price {
+        font-size: 36px;
+    }
+    .students-block .title {
+        font-size: 32px;
+    }
+    .faq-block .subtitle {
+        font-size: 32px;
+    }
+    .accordeon-content {
+        font-size: 18px;
+    }
+    .cards-container .title {
+        font-size: 32px;
+    }
+    .cards__item-title {
+        font-size: 20px;
+    }
+    .cards__item-text {
+        font-size: 18px;
+    }
+    .accordeon-title {
+        font-size: 18px;
+    }
+    .links-list__item a,
+    .privacy-police p,
+    .work-time {
+        font-size: 16px;
+    }
+    .accordeon-button .bar {
+        width: 19px;
+        height: 2px;
+    }
+    .accordeon-button .bar:nth-child(2) {
+        transform: translateY(-2px) rotate(90deg);
+      }
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        padding: 0 60px;
+        position: relative;
+      }
+    .main-block__text {
+        font-size: 20px;
+    }
+    .method-block .title {
+        font-size: 28px;
+    }
+    .title, .subtitle {
+        font-size: 28px;
+    }
+    .fit-buttons__item {
+        font-size: 16px;
+    }
+    .fits-block .swiper-slide {
+        font-size: 16px;
+    }
+    .rate-cards__item-row-text {
+        font-size: 16px;
+      }
+    .rate-cards__item-row-head {
+        font-size: 14px;
+      }
+      .students-block .title,
+      .faq-block .subtitle {
+        font-size: 28px;
+      }
+      .accordeon-title {
+        font-size: 16px;
+      }
+      .accordeon-content {
+        font-size: 16px;
+      }
+      .cards-container .title {
+        font-size: 28px;
+      }
+      .cards__item-text {
+        font-size: 16px;
+      }
+      .links-list__item a,
+      .privacy-police p,
+      .work-time {
+          font-size: 14px;
+      }      
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        padding: 0 40px;
+        position: relative;
+      }
+    .about-cards {
+        flex-direction: column;
+    }
+
+    .accordeon-button .bar {
+        width: 14px;
+        height: 1.5px;
+    }
+    .accordeon-button .bar:nth-child(2) {
+        transform: translateY(-1px) rotate(90deg);
+    }
+    .privacy-police p {
+        font-size: 12px;
+    } 
 }
