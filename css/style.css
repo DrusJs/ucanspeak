@@ -10,11 +10,27 @@
     font-family: RobotoMedium;
     src: url(../fonts/Roboto-Medium.ttf);
 }
+@font-face {
+    font-family: TTCommonsRegular;
+    src: url(../fonts/TTCommons-Regular.ttf);
+}
+@font-face {
+    font-family: TTCommonsBold;
+    src: url(../fonts/TTCommons-Bold.ttf);
+}
+@font-face {
+    font-family: TTCommonsMedium;
+    src: url(../fonts/TTCommons-Medium.ttf);
+}
+@font-face {
+    font-family: TTCommonsDemiBold;
+    src: url(../fonts/TTCommons-DemiBold.ttf);
+}
 
 :root {
-    --font-regular: "RobotoRegular";
-    --font-medium: "RobotoMedium";
-    --font-bold: "RobotoBold";
+    --font-regular: "TTCommonsRegular";
+    --font-medium: "TTCommonsMedium";
+    --font-bold: "TTCommonsBold";
     --color-body-bg: #64BEF2;
     --color-main-blue: #193B93;
     --color-main-blue-hover: #2C4EA6;
@@ -72,7 +88,7 @@ body.white {
     height: 6px;
     border-radius: 28px;
     background-color: var(--color-main-blue);
-    transition: 160ms;
+    transition: transform, opacity 160ms;
 }
 
 .burger-button.active .bar:nth-child(1) {
@@ -98,10 +114,6 @@ body.white {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container.white {
-    background-color: #FFFFFF;
 }
 
 .main-block {
@@ -163,7 +175,7 @@ body.white {
     padding: 180px 160px;
 }
 .white-block {    
-    background-color: #FFFFFF;
+    background-color: #F7F7F7;
 }
 
 .title {
@@ -503,9 +515,10 @@ img.absolute {
 }
 .student-card {
     position: relative;
-    padding: 114px 12px 60px;
+    padding: 114px 32px 60px;
     background-color: #FFFFFF;
     border-radius: 8px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
 }
 .student-card .student-card__photo {
     background-color: #FFFFFF;
@@ -522,12 +535,33 @@ img.absolute {
 .student-card .student-card__photo img {
     border-radius: 100%;
 }
+.student-card__name {
+    font-size: 18px;
+    font-family: var(--font-bold);
+    margin-bottom: 6px;
+}
+.student-card__occupation {
+    font-size: 18px;
+    font-family: var(--font-medium);
+    margin-bottom: 20px;
+}
+
+.student-card__description {
+    font-size: 18px;
+    font-family: var(--font-regular);
+    text-align: left;
+}
 
 .faq-block {
-
+    padding: 80px 160px;
+}
+.faq-block .subtitle {
+    margin-bottom: 20px ;
 }
 .accordeon-block {
     border-bottom: 2px solid #C8C8C8;
+    max-width: 1030px;
+    margin: 0 auto;
 }
 .accordeon-head {
     display: flex;
@@ -565,14 +599,16 @@ img.absolute {
     font-family: var(--font-regular);
     line-height: 120%;
     overflow: hidden;
-    transition: 300ms;
+    transition: max-height 300ms;
 }
 
 .accordeon-block.active .accordeon-content {
     padding: 20px 0;
     max-height: auto;
 }
-
+.cards-container {
+    margin: 100px 0;
+}
 .cards {
     display: flex;
     justify-content: space-between;

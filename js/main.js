@@ -30,9 +30,9 @@ function fitButtonsAction(button, slide) {
 const accordions = document.querySelectorAll(".accordeon-block")
 accordions.forEach((el)=> {
     el.querySelector(".accordeon-head").addEventListener("click", (e)=>{
-        if (document.querySelector(".accordeon-block.active")) {
-            document.querySelector(".accordeon-block.active").classList.remove("active")
-        }
+        // if (document.querySelector(".accordeon-block.active")) {
+        //     document.querySelector(".accordeon-block.active").classList.remove("active")
+        // }
         e.currentTarget.parentElement.classList.toggle("active")
     })
 })
