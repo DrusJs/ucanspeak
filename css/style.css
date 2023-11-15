@@ -59,6 +59,18 @@ body.white {
     position: relative;
 }
 
+
+.top-bg {
+    position: relative;
+    bottom: 150px;
+    pointer-events: none;
+}
+.bottom-bg {
+    position: relative;
+    top: 140px;
+    pointer-events: none;
+    z-index: -1;
+}
 .header {
     padding: 38px 82px;
     display: flex;
@@ -161,7 +173,9 @@ body.white {
 }
 
 .about-block {
-    padding: 180px 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .white-block {    
     background-color: #F7F7F7;
@@ -253,7 +267,7 @@ img.absolute {
 }
 
 .fits-block {
-    padding: 180px 160px;
+    padding: 0px 160px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -642,6 +656,9 @@ img.absolute {
 
 .footer {
     background-color: #4A4F5F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
