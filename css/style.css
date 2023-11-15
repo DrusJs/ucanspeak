@@ -64,6 +64,7 @@ body.white {
     position: absolute;
     top: -240px;
     pointer-events: none;
+    z-index: -1;
 }
 .top-bg-purple {
     width: 100%;
@@ -71,6 +72,7 @@ body.white {
     position: absolute;
     top: -220px;
     pointer-events: none;
+    z-index: -1;
 }
 .bottom-bg {
     position: absolute;
@@ -78,6 +80,7 @@ body.white {
     bottom: -240px;
     pointer-events: none;
     width: 100%;
+    z-index: -1;
 }
 .header {
     padding: 38px 82px;
