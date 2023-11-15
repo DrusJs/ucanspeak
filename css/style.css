@@ -328,6 +328,9 @@ img.absolute {
     gap: 27px;
     margin: 27px 0 100px 0;
 }
+.fit-buttons .mob {
+    display: none;
+}
 .fit-buttons__item {
     font-size: 24px;
     font-family: var(--font-regular);
@@ -368,16 +371,17 @@ img.absolute {
     padding: 60px 49px;
     font-family: var(--font-regular);
 }
-
+.flex .swiper-wrapper {
+    align-items: center;
+}
 .fits-block .swiper .swiper-bg{
-    width: 92%;
+    width: calc(100% - 60px);
     position: absolute;
-    top: 14px;
+    top: 36px;
     left: 30px;
     border-radius: 20px;
     background: var(--color-main-grey);
     padding: 60px 49px;
-    min-height: 170px;
     height: 80%;
     box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.25);
 }
@@ -412,6 +416,7 @@ img.absolute {
     text-align: center;
     font-size: 32px;
     line-height: 50px;
+    font-weight: 700;
 }
 .fits-block .swiper-button-next {
     right: 0px;
@@ -506,7 +511,7 @@ img.absolute {
 }
 .rate-cards__item-price {
     text-align: center;
-    margin: 53px;
+    margin: 53px 0;
 }
 .rate-cards__item-price .price {
     color: #333333;
@@ -623,6 +628,7 @@ img.absolute {
     text-align: center;
     font-size: 32px;
     line-height: 50px;
+    font-weight: 700;
 }
 
 
@@ -1050,7 +1056,10 @@ img.absolute {
         margin-top: 10px;
     }
     .fits-block {
-        padding: 25px 80px 256px;
+        padding: 25px 110px 256px;
+    }
+    .fit .button {
+        max-width: 340px;
     }
     .main-block__text {
         font-size: 24px;
@@ -1098,6 +1107,31 @@ img.absolute {
     }
     .fits-block .swiper-slide {
         font-size: 18px;
+    }
+    .flex {
+        gap: 30px;
+    }
+    .fits-block .swiper-button-next, .fits-block .swiper-button-prev {
+        width: 28px;
+        height: 28px;
+    }
+    .fits-block .swiper-button-next::after, .fits-block .swiper-button-prev::after {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .fits-block .swiper {
+        width: 700px;
+        padding: 60px 20px;
+    }
+    
+    .fits-block .swiper .swiper-bg {
+        width: calc(100% - 35px);
+        top: 5px;
+        left: 20px;
+        padding: 60px 20px;
+    }
+    .rate-cards {
+        justify-content: space-around;
     }
     .rate-cards__item {
         padding: 34px 55px 0 55px;
@@ -1185,6 +1219,15 @@ img.absolute {
         min-width: 1000px;
         top: -100px;
     }
+    .rate-cards__item {
+        padding: 34px 30px 0;
+    }
+    .flex {
+        gap: 20px;
+    }
+    .bg-block {
+        display: none;
+    }
     .bottom-bg {        
         min-width: 1000px;
         bottom: -110px;
@@ -1201,7 +1244,7 @@ img.absolute {
         max-width: 341px;
     }
     .fits-block {
-        padding: 25px 60px 256px;
+        padding: 25px 40px 256px;
     }
     .accordeon-head {
         padding: 15px 0;
@@ -1302,6 +1345,58 @@ img.absolute {
 @media screen and (max-width: 700px) {
     .header {
         padding: 38px 42px;
+    }
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .fits-block .swiper {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    .fits-block .swiper-button-next, .fits-block .swiper-button-prev {
+        display: none;
+    }
+    .fit-buttons {
+        position: relative;
+        align-items: center;
+    }
+    .fits-block .swiper .swiper-bg {
+        width: calc(100% - 32px);
+        top: 5px;
+        left: 16px;
+        padding: 60px 20px;
+        height: 95%;
+    }
+    .fit-buttons .mob {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 40px;
+    }
+    .fits-block .swiper-button-next {
+        right: -40px;
+    }
+    .fits-block .swiper-button-prev {
+        left: -40px;
+    }
+    .fit-buttons__item {
+        display: none;
+    }
+    .fit-buttons__item.active {
+        display: block;
+        background-color: var(--color-main-grey);
+        box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.25);
+        color: var(--color-main-text);
+        transition: 260ms;
+    }
+    .fit-buttons__item.active:hover {
+        background-color: var(--color-main-grey);
+        box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.25);
+    }
+    .bg-block {
+        display: block;
     }
     .container.center {
         display: flex;

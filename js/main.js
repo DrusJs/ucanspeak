@@ -8,7 +8,6 @@ const swiper = new Swiper(".fit-tabs", {
     },
     on: {
         slideChange: function () {
-          console.log(swiper.activeIndex);
           document.querySelector(".fit-buttons__item.active").classList.remove("active")
           document.getElementsByClassName("fit-buttons__item")[swiper.activeIndex].classList.add("active")
         },
@@ -33,7 +32,6 @@ const swiperStudent = new Swiper(".students-swiper", {
         }
     }
 });
-console.log(document.getElementsByClassName("fit-buttons__item")[1]);
 function fitButtonsAction(button, slide) {
     if (!button.classList.contains("active")) {
         document.querySelector(".fit-buttons__item.active").classList.remove("active")
@@ -66,5 +64,14 @@ function closeModal(event) {
     if (event.target.classList.contains("modal-wrapper")) {
         document.querySelector('.modal-wrapper.active').classList.remove("active")
         document.body.classList.remove("noscroll")
+    }
+}
+
+function swapSlideMobile(direction) {
+    console.log(1);
+    if (direction =="left") {
+        swiper.slideTo(swiper.activeIndex+1)
+    } else {
+        swiper.slideTo(swiper.activeIndex-1)
     }
 }
