@@ -432,6 +432,8 @@ img.absolute {
 }
 .fit .button {
     max-width: 430px;
+    position: relative;
+    z-index: 1;
 }
 .bg-block {
     max-height: 0;
@@ -1350,6 +1352,9 @@ img.absolute {
         flex-direction: column;
         align-items: center;
     }
+    .fits-block {
+        padding: 25px 40px 80px;
+    }
     .fits-block .swiper {
         width: 100%;
         padding: 40px 20px;
@@ -1378,11 +1383,22 @@ img.absolute {
     .fits-block .swiper-button-next {
         right: -40px;
     }
+    .container.rate {
+        padding-top: 190px;
+        padding-bottom: 180px;
+        background-image: url(../images/bgcrcl-rate.png);
+        background-repeat: no-repeat;
+        background-position: 0 100px;
+        background-size: cover;
+    }
     .fits-block .swiper-button-prev {
         left: -40px;
     }
     .fit-buttons__item {
         display: none;
+    }
+    .fit .button {
+        margin-top: 335px;
     }
     .fit-buttons__item.active {
         display: block;
@@ -1397,7 +1413,12 @@ img.absolute {
     }
     .bg-block {
         display: block;
+        z-index: 0;
+        position: relative;
     }
+    .bg-block picture img {
+        top: -800px;
+      }
     .container.center {
         display: flex;
         align-items: center;
