@@ -812,9 +812,10 @@ img.absolute {
     flex-direction: column;
     align-items: center;
     min-height: 100px;
-    margin-top: 140px;
+    margin-top: 130px;
     padding: 0 160px;
     position: relative;
+    z-index: 1;
 }
 .footer.levels {
     margin-top: 1000px;
