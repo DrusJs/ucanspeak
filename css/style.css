@@ -69,11 +69,13 @@ body.white {
     margin: 0 auto;
     position: relative;
     overflow-x: hidden;
+    z-index: 0;
+}
+.wrapper.bg {
     background-image: url(../images/bgcrcl-main.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;
-    z-index: 0;
 }
 
 
@@ -838,6 +840,7 @@ img.absolute {
 }
 .level-links a {
     margin-left: 120px;
+    margin-top: 6px;
 }
 .level-links .button {
     width: 521px;
@@ -1044,6 +1047,16 @@ img.absolute {
     .header {
         padding: 38px 50px;
     }
+    .bg-levels {
+        right: -734px;
+    }
+    .level-links {
+        flex-basis: 90%;
+    }
+    .level-links .button {
+        width: 460px;
+        border-radius: 37px;
+      }
     .students-block .swiper {
         padding: 104px 60px 40px;
     }
@@ -1221,12 +1234,30 @@ img.absolute {
         transform: scale(0.7);
         right: -40px;
     }
+    .level-links .button:nth-child(2) {
+        margin-top: 200px;
+    }
 }
 
 @media screen and (max-width: 990px) {
     .top-bg {
         min-width: 1000px;
         top: -130px;
+    }
+    .back-button {    
+        width: 50px;
+        min-width: 30px;
+        height: 25px; 
+        filter: none;
+        background-image: url(../images/arrow-back-mobile.svg);
+    }
+    .level-links .button:nth-child(2) {
+        margin-top: 160px;
+    }
+    .bg-levels {
+        top: -242px;
+        right: -734px;
+        transform: scale(0.8);
     }
     .top-bg-purple {        
         min-width: 1000px;
@@ -1370,10 +1401,29 @@ img.absolute {
 }
 
 @media screen and (max-width: 700px) {
+    .footer.levels {
+        margin-top: 700px;
+    }
+    .level-links a {
+        margin-left: 0;
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .level-links .button {
+        width: 100%;
+    }
+    .bg-levels {
+        display: none;
+    }
+    .signup-button {
+        font-size: 0;
+    }
     .button.blue:hover {
         background-color: var(--color-main-blue);
         box-shadow: var(--drop-shadow-buttons);
     }
+    
     .button.purple:hover {
         background-color: var(--color-main-purple);
         box-shadow: var(--drop-shadow-buttons);
