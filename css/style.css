@@ -192,10 +192,10 @@ body.white {
     box-shadow: none;
 }
 .button.purple {
-    background-color: var(--color-main-purple-hover);
+    background-color: var(--color-main-purple);
 }
 .button.purple:hover {
-    background-color: var(--color-main-purple);
+    background-color: var(--color-main-purple-hover);
     box-shadow: none;
 }
 .button.gradient {
@@ -1375,6 +1375,18 @@ img.absolute {
 }
 
 @media screen and (max-width: 700px) {
+    .button.blue:hover {
+        background-color: var(--color-main-blue);
+        box-shadow: var(--drop-shadow-buttons);
+    }
+    .button.purple:hover {
+        background-color: var(--color-main-purple);
+        box-shadow: var(--drop-shadow-buttons);
+    }
+    .button.gradient:hover {
+        background-position: 0;
+        box-shadow: var(--drop-shadow-buttons);
+    }
     .header {
         padding: 38px 42px;
     }
@@ -1419,12 +1431,8 @@ img.absolute {
         right: -48px;
     }
     .container.rate {
-        padding-top: 180px;
-        padding-bottom: 180px;
-        background-image: url(../images/bgcrcl-rate.png);
-        background-repeat: no-repeat;
-        background-position: 0 100px;
-        background-size: cover;
+        padding-top: 80px;
+        padding-bottom: 180px;  
     }
     .fits-block .swiper-button-prev {
         left: -48px;
@@ -1499,7 +1507,7 @@ img.absolute {
         transform: translateY(7px) rotate(45deg);
     }    
     .burger-button.active .bar:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-7px) rotate(-45deg);
     }
     .main-block {
         margin-left: 0;
@@ -1545,14 +1553,14 @@ img.absolute {
     }
     .rate-cards {
         flex-direction: column;
-        gap: 50px;
+        gap: 100px;
+        margin-top: 45px;
     }
     .rate-subscribe .button {
         width: 240px;
     }
     .rate-cards__item {
         max-width: 400px;
-        margin: 0 auto;
     }
     .rate-cards__item .button {
         margin-bottom: -25px;
@@ -1588,7 +1596,7 @@ img.absolute {
     }
     .faq-block {
         padding: 44px 0 24px;
-        margin: 51px 0 116px 0;
+        margin: 108px 0 76px 0;
     }
     .about-cards__item, .cards__item {
         padding: 60px 30px 30px 30px;
