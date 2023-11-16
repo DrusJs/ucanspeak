@@ -26,9 +26,15 @@ const swiperStudent = new Swiper(".students-swiper", {
     breakpoints: {
         220: {
             slidesPerView: 1,
+            spaceBetween: 40,
         },
         601: {
             slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        1401: {
+            slidesPerView: 3,
+            spaceBetween: 50,
         }
     }
 });

@@ -1047,9 +1047,15 @@ img.absolute {
     .students-block .swiper {
         padding: 104px 60px 40px;
     }
+    .student-card {
+        padding: 100px 22px 40px;
+      }
     .container {
         padding: 0 80px;
         position: relative;
+    }
+    .container.students {
+        padding: 100px 40px 200px;
     }
     .main-block {
         max-width: 419px;
@@ -1123,7 +1129,7 @@ img.absolute {
     }
     .fits-block .swiper {
         width: 700px;
-        padding: 60px 20px;
+        padding: 50px 20px;
     }
     
     .fits-block .swiper .swiper-bg {
@@ -1146,12 +1152,17 @@ img.absolute {
     }
     .rate-cards__item-row {
         width: 193px;
+        padding: 14px 0;
     }
     .rate-cards__item-row-head {
         font-size: 15px;
     }
+
+    .rate-cards__item-price {
+        margin: 40px 0;
+    }
     .rate-cards__item-price .price {
-        font-size: 30px;
+        font-size: 28px;
     }
     .rate-cards__item-price .subprice {
         font-size: 20px;
@@ -1258,7 +1269,17 @@ img.absolute {
         font-size: 28px;
     }
 
-    .about-cards__item img, .cards__item img {
+    .about-cards__item img {
+        width: 140px;
+        top: -52px;
+    }
+    .about-cards__item, .cards__item {
+        padding: 80px 20px 30px 20px;
+    }
+    .about-cards {
+        gap: 30px;
+    }
+    .cards__item img {
         width: 140px;
         top: -60px;
     }
@@ -1284,6 +1305,15 @@ img.absolute {
     }
     .rate-cards__item-row-head {
         font-size: 14px;
+    }
+    .rate-cards__item-price {
+        margin: 25px 0;
+    }
+    .rate-cards__item-price .price {
+        font-size: 22px;
+    }
+    .rate-cards__item-price .subprice {
+        font-size: 18px;
     }
     .students-block .title,
     .faq-block .subtitle {
@@ -1353,11 +1383,15 @@ img.absolute {
         align-items: center;
     }
     .fits-block {
-        padding: 25px 40px 80px;
+        padding: 10px 40px 80px;
+    }
+    .fit-buttons__item {
+        width: 156px;
+        padding: 16px 0 16px;
     }
     .fits-block .swiper {
         width: 100%;
-        padding: 40px 20px;
+        padding: 30px 20px;
     }
     .fits-block .swiper-button-next, .fits-block .swiper-button-prev {
         display: none;
@@ -1365,26 +1399,27 @@ img.absolute {
     .fit-buttons {
         position: relative;
         align-items: center;
+        margin: 27px 0;
     }
     .fits-block .swiper .swiper-bg {
         width: calc(100% - 32px);
         top: 5px;
         left: 16px;
-        padding: 60px 20px;
-        height: 95%;
+        padding: 50px 20px;
+        height: 90%;
     }
     .fit-buttons .mob {
         display: block;
         display: flex;
         align-items: center;
         justify-content: center;
-        top: 40px;
+        top: 30px;
     }
     .fits-block .swiper-button-next {
-        right: -40px;
+        right: -48px;
     }
     .container.rate {
-        padding-top: 190px;
+        padding-top: 180px;
         padding-bottom: 180px;
         background-image: url(../images/bgcrcl-rate.png);
         background-repeat: no-repeat;
@@ -1392,13 +1427,18 @@ img.absolute {
         background-size: cover;
     }
     .fits-block .swiper-button-prev {
-        left: -40px;
+        left: -48px;
     }
     .fit-buttons__item {
         display: none;
     }
     .fit .button {
-        margin-top: 335px;
+        margin-top: 400px;
+        background-color: var(--color-main-blue);
+    }
+    .fit .button:hover {
+        background-color: var(--color-main-blue);
+        box-shadow: var(--drop-shadow-buttons);
     }
     .fit-buttons__item.active {
         display: block;
@@ -1417,7 +1457,7 @@ img.absolute {
         position: relative;
     }
     .bg-block picture img {
-        top: -800px;
+        top: -765px;
       }
     .container.center {
         display: flex;
@@ -1449,7 +1489,7 @@ img.absolute {
         position: relative;
     }
     .burger-button {
-        gap: 4px;
+        gap: 3px;
     }
     .burger-button .bar {
         width: 26px;
@@ -1473,7 +1513,7 @@ img.absolute {
     }
     .main-block__button {
         position: absolute;
-        bottom: -26px;
+        bottom: -60px;
         left: 42px;
         max-width: calc(100% - 84px);
     }
@@ -1501,7 +1541,7 @@ img.absolute {
         max-width: 340px;
     }
     .request-block .button {
-        width: 340px;
+        width: 88%;
     }
     .rate-cards {
         flex-direction: column;
@@ -1558,6 +1598,9 @@ img.absolute {
         width: 150px;
         top: -72px;
     }
+    .about-block {
+        padding: 12px 0 41px;
+    }
     .cards__item img {
         width: 100px;
         top: -50px;
@@ -1581,7 +1624,7 @@ img.absolute {
         align-items: center;
     }
     .about-cards {
-        gap: 57px;
+        gap: 85px;
         margin-top: 52px;
     }
     .accordeon-button .bar {
@@ -1637,6 +1680,10 @@ img.absolute {
 @media screen and (max-width: 400px) {
     .header {
         padding: 38px 15px;
+    }
+    .burger-button {
+        gap: 3px;
+        margin-right: 15px;
     }
     .container {
         padding: 0 15px;
