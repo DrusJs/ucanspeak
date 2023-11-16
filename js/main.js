@@ -28,7 +28,7 @@ const swiperStudent = new Swiper(".students-swiper", {
             slidesPerView: 1,
             spaceBetween: 40,
         },
-        601: {
+        700: {
             slidesPerView: 3,
             spaceBetween: 30,
         },

@@ -218,6 +218,7 @@ body.white {
 .white-block {    
     background-color: #F7F7F7;
     position: relative;
+    z-index: 2;
 }
 
 .title {
@@ -439,13 +440,13 @@ img.absolute {
 }
 .bg-block {
     max-height: 0;
-    width: 100vw;
+    width: 100vw;;
 }
 .bg-block picture img{
     width: 100vw;
     top: -472px;
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
     position: relative;
 }
 .container.rate {
@@ -1047,6 +1048,16 @@ img.absolute {
     .header {
         padding: 38px 50px;
     }
+    img.absolute {
+        right: -5%;
+    }
+    .method-block {
+        max-width: 335px;
+    }
+    .method-block .button {
+        font-size: 20px;
+        padding: 18px;
+    }
     .bg-levels {
         right: -734px;
     }
@@ -1076,9 +1087,13 @@ img.absolute {
         margin-left: -168px;
         margin-top: 10px;
     }
-    .fits-block {
-        padding: 25px 110px 256px;
+
+    .container.rate {
+        padding-top: 200px;
+        padding-bottom: 150px;
+        background-position: center;
     }
+
     .fit .button {
         max-width: 340px;
     }
@@ -1104,8 +1119,14 @@ img.absolute {
         font-size: 32px;  
         letter-spacing: -1px;
     }
-    .about-cards__item, .cards__item {
+    .about-cards__item {
         padding: 80px 30px 42px 30px;
+    }
+    .cards {
+        gap: 30px;
+    }
+    .cards__item {
+        padding: 140px 30px 30px 30px;
     }
     .about-cards__item img, .cards__item img {
         width: 170px;
@@ -1244,12 +1265,37 @@ img.absolute {
         min-width: 1000px;
         top: -130px;
     }
+    .fits-block {
+        padding: 25px 110px 180px;
+    }
+    .container.students {
+        padding: 0px 40px 150px;
+    }
+    .faq-block {
+        margin: 50px 0 150px 0;
+    }
     .back-button {    
         width: 50px;
         min-width: 30px;
         height: 25px; 
         filter: none;
         background-image: url(../images/arrow-back-mobile.svg);
+    }
+    .method-block {
+        width: 100%;
+        max-width: none;
+    }
+    img.absolute {
+        right: -4%;
+        width: 890px;
+        top: 40px;
+    }
+    .container.method {
+        padding-bottom: 185px;
+    }
+    .method-block__text {
+        width: 100%;
+        margin: 5px 0 560px 0;
     }
     .level-links .button:nth-child(2) {
         margin-top: 160px;
@@ -1312,7 +1358,7 @@ img.absolute {
     }
     .cards__item img {
         width: 140px;
-        top: -60px;
+        top: -84px;
     }
     .about-cards__item-title {
         font-size: 20px;
@@ -1392,7 +1438,7 @@ img.absolute {
         font-size: 20px;
         padding: 11px 30px 18px 30px;
         margin-top: 17px;
-        text-transform: none;
+        letter-spacing: 0;
     }
     .modal .modal-policy {
         font-size: 14px;
@@ -1403,6 +1449,9 @@ img.absolute {
 @media screen and (max-width: 700px) {
     .footer.levels {
         margin-top: 700px;
+    }
+    .cards {
+        gap: 100px;
     }
     .level-links a {
         margin-left: 0;
